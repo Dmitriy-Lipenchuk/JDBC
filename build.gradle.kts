@@ -13,6 +13,6 @@ allprojects {
     apply(plugin = "java")
 
     dependencies {
-        implementation("com.intellij:annotations:12.0")
+        implementation("org.jetbrains:annotations:23.0.0")
     }
 }
