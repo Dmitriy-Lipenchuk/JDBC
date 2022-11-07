@@ -1,0 +1,4 @@
+# Project exclude paths
+/.gradle/
+/accounting-system/build/
+/.idea/
