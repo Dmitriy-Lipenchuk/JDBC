@@ -36,12 +36,12 @@ public class InvoiceDao implements Dao<Invoice> {
     private final static String UPDATE_SQL = """
             UPDATE invoices
             SET date = ?, organisation_id =?
-            WHERE id = ?
+            where id = ?
             """;
 
     private final static String DELETE_SQL = """
             DELETE FROM invoices
-            WHERE id = ?
+            where id = ?
             """;
 
     public InvoiceDao(@NotNull InvoicePositionDao invoicePositionDao) {

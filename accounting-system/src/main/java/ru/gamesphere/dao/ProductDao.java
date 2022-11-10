@@ -31,12 +31,12 @@ public class ProductDao implements Dao<Product> {
     private final static String UPDATE_SQL = """
             UPDATE products
             SET name = ?
-            WHERE id = ?
+            where id = ?
             """;
 
     private final static String DELETE_SQL = """
             DELETE FROM products
-            WHERE id = ?
+            where id = ?
             """;
 
     @Override

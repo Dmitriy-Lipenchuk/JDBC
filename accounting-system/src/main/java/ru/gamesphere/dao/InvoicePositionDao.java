@@ -32,12 +32,12 @@ public class InvoicePositionDao implements Dao<InvoicePosition> {
     private final static String UPDATE_SQL = """
             UPDATE invoice_positions
             SET product_id = ?, invoice_id = ?, price = ?, quantity = ?
-            WHERE id = ?
+            where id = ?
             """;
 
     private final static String DELETE_SQL = """
             DELETE FROM invoice_positions
-            WHERE id = ?
+            where id = ?
             """;
 
     private final static String GET_BY_INVOICE_ID_SQL = """

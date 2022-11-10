@@ -33,12 +33,12 @@ public class OrganisationDao implements Dao<Organisation> {
     private final static String UPDATE_SQL = """
             UPDATE organisations
             SET name = ?, inn =?, bank_account =?
-            WHERE id = ?
+            where id = ?
             """;
 
     private final static String DELETE_SQL = """
             DELETE FROM organisations
-            WHERE id = ?
+            where id = ?
             """;
 
     @Override
