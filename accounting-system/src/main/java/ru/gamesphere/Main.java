@@ -12,29 +12,29 @@ public class Main {
     public static void main(String[] args) {
         FlywayInitializer.initDb();
 
-        System.out.println("Первые 10 компаний по количеству поставленного товара:");
+        System.out.println("РџРµСЂРІС‹Рµ 10 РєРѕРјРїР°РЅРёР№ РїРѕ РєРѕР»РёС‡РµСЃС‚РІСѓ РїРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ С‚РѕРІР°СЂР°:");
         ReportGenerator.getFirstTenOrganisationsByProductQuantity();
         System.out.println();
 
-        System.out.println("Поставщики с количеством поставленного товара выше заданного:");
+        System.out.println("РџРѕСЃС‚Р°РІС‰РёРєРё СЃ РєРѕР»РёС‡РµСЃС‚РІРѕРј РїРѕСЃС‚Р°РІР»РµРЅРЅРѕРіРѕ С‚РѕРІР°СЂР° РІС‹С€Рµ Р·Р°РґР°РЅРЅРѕРіРѕ:");
         ReportGenerator.getOrganisationsByProductQuantity(66);
         System.out.println();
 
-        System.out.println("Количество и цена товара подневно за заданный период и итоги:");
+        System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ Рё С†РµРЅР° С‚РѕРІР°СЂР° РїРѕРґРЅРµРІРЅРѕ Р·Р° Р·Р°РґР°РЅРЅС‹Р№ РїРµСЂРёРѕРґ Рё РёС‚РѕРіРё:");
         ReportGenerator.getQuantityAndSumOfProductsByPeriodForEachDay(
                 new Timestamp(new GregorianCalendar(2022, Calendar.OCTOBER, 1).getTimeInMillis()),
                 new Timestamp(new GregorianCalendar(2022, Calendar.OCTOBER, 3).getTimeInMillis())
         );
         System.out.println();
 
-        System.out.println("Средняя цена за период:");
+        System.out.println("РЎСЂРµРґРЅСЏСЏ С†РµРЅР° Р·Р° РїРµСЂРёРѕРґ:");
         ReportGenerator.getAveragePriceByPeriod(
                 new Timestamp(new GregorianCalendar(2022, Calendar.OCTOBER, 1).getTimeInMillis()),
                 new Timestamp(new GregorianCalendar(2022, Calendar.OCTOBER, 3).getTimeInMillis())
         );
         System.out.println();
 
-        System.out.println("Список товаров за период:");
+        System.out.println("РЎРїРёСЃРѕРє С‚РѕРІР°СЂРѕРІ Р·Р° РїРµСЂРёРѕРґ:");
         ReportGenerator.getCompanyProductListByPeriod(
                 new Timestamp(new GregorianCalendar(2022, Calendar.OCTOBER, 1).getTimeInMillis()),
                 new Timestamp(new GregorianCalendar(2022, Calendar.OCTOBER, 3).getTimeInMillis())
