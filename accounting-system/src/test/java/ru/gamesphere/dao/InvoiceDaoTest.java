@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import ru.gamesphere.AbstractTest;
 import ru.gamesphere.model.Invoice;
 import ru.gamesphere.model.InvoicePosition;
 
@@ -18,7 +19,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-class InvoiceDaoTest {
+class InvoiceDaoTest extends AbstractTest {
 
     InvoiceDao invoiceDao = new InvoiceDao(new InvoicePositionDao());
 
@@ -134,6 +135,46 @@ class InvoiceDaoTest {
                         3,
                         List.of(new InvoicePosition(11, 3, 9, 80, 50),
                                 new InvoicePosition(12, 3, 9, 110, 5))
+                ),
+                arguments(10,
+                        new Timestamp(new GregorianCalendar(2023, Calendar.OCTOBER, 1).getTimeInMillis()),
+                        4,
+                        List.of()
+                ),
+                arguments(11,
+                        new Timestamp(new GregorianCalendar(2023, Calendar.OCTOBER, 1).getTimeInMillis()),
+                        5,
+                        List.of()
+                ),
+                arguments(12,
+                        new Timestamp(new GregorianCalendar(2023, Calendar.OCTOBER, 1).getTimeInMillis()),
+                        6,
+                        List.of()
+                ),
+                arguments(13,
+                        new Timestamp(new GregorianCalendar(2023, Calendar.OCTOBER, 1).getTimeInMillis()),
+                        7,
+                        List.of()
+                ),
+                arguments(14,
+                        new Timestamp(new GregorianCalendar(2023, Calendar.OCTOBER, 1).getTimeInMillis()),
+                        8,
+                        List.of()
+                ),
+                arguments(15,
+                        new Timestamp(new GregorianCalendar(2023, Calendar.OCTOBER, 1).getTimeInMillis()),
+                        9,
+                        List.of()
+                ),
+                arguments(16,
+                        new Timestamp(new GregorianCalendar(2023, Calendar.OCTOBER, 1).getTimeInMillis()),
+                        10,
+                        List.of()
+                ),
+                arguments(17,
+                        new Timestamp(new GregorianCalendar(2023, Calendar.OCTOBER, 1).getTimeInMillis()),
+                        11,
+                        List.of()
                 )
         );
     }
